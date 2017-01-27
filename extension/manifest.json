@@ -1,0 +1,28 @@
+{
+  "name": "Nextcloud Screensharing",
+  "description": "Screensharing utility for the Nextcloud Spreed app.",
+  "author": "Joachim Bauch <bauch@struktur.de>",
+  "homepage_url": "https://nextcloud.com",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "minimum_chrome_version": "34",
+  "icons": {
+  },
+  "permissions": [
+    "tabs",
+    "desktopCapture",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "js": ["detector.js"],
+      "matches": ["https://*/*"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ]
+}
