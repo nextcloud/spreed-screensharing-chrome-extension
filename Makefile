@@ -1,13 +1,13 @@
-VERSION := $(shell node -e "fs=require('fs');console.log(JSON.parse(fs.readFileSync(process.argv[1])).version)" ./extension/manifest.json)
+SRC := ./extension
+DIST := ./dist
+ZIP := $(shell which zip)
 
-all:
-	@echo "Version: $(VERSION) - use \"make zip\" to build ..."
+PACKAGE_NAME := nextcloud-video-calls-screensharing
+PACKAGE_VERSION := $(shell node -e "fs=require('fs');console.log(JSON.parse(fs.readFileSync(process.argv[1])).version)" ./extension/manifest.json)
 
-dist:
-	@mkdir -p dist
-	@cp -r extension dist
+build:
+	rm -rf $(DIST); \
+	mkdir -p $(DIST); \
+	cd $(SRC); \
+	find . -type f -print | $(ZIP) ../$(DIST)/$(PACKAGE_NAME)-$(PACKAGE_VERSION).zip -@
 
-zip: dist
-	cd dist && zip ../nextcloud-spreed-screensharing-$(VERSION).zip extension/*
-
-.PHONY: dist

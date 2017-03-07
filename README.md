@@ -1,4 +1,4 @@
-# Chrome extension to support screensharing in the Nextcloud Spreed app
+# Chrome extension to support screensharing in the Nextcloud [Video calls](https://github.com/nextcloud/spreed) app
 
 Based on the getScreenMedia example from
 https://github.com/HenrikJoreteg/getScreenMedia/tree/master/chrome-extension-sample
