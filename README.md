@@ -6,5 +6,11 @@ https://github.com/HenrikJoreteg/getScreenMedia/tree/master/chrome-extension-sam
 
 ## Installation
 
-See https://developer.chrome.com/extensions/getstarted#unpacked for further
-information on how to load the unpacked extension.
+Install the extension from the Chrome Webstore:
+[Screensharing for Nextcloud Video calls app](https://chrome.google.com/webstore/detail/screensharing-for-nextclo/kepnpjhambipllfmgmbapncekcmabkol)
+
+
+## Developer setup
+
+1. Clone this repository
+2. See https://developer.chrome.com/extensions/getstarted#unpacked for further information on how to load the unpacked extension.
